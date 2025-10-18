@@ -1,0 +1,30 @@
+@import "tailwindcss";
+@plugin "flowbite-react/plugin/tailwindcss";
+@source "../.flowbite-react/class-list.json";
+
+body{
+	font-family: 'Poppins', sans-serif;
+	}
+.gradient-text {
+	background: linear-gradient(90deg, #06b6d4, #9333ea);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	}
+
+b{
+	color: aqua;
+	}
+ 
+.code-banner {
+	background-image: url("/public/coding.png");
+	background-size: cover; /* Ensures the image covers the entire header */
+	background-position: center; /* Centers the image */
+	height: 140px; /* Set a specific height */
+	color: white;
+	text-align: center;
+	padding: 50px 20px;
+	}
+
+.code-banner:hover {
+	transform: scale(1.05); /* Slight zoom on hover */
+	}
