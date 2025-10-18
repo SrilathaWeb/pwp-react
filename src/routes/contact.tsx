@@ -1,7 +1,7 @@
 export default function Contact() {
     return (
         <>
-            <form className="form-group container p-5 bg-gray-800 flex flex-col items-center">
+            <form className="form-group p-5 bg-gray-800 flex flex-col items-center">
                 <h1 className="text-center text-4xl m-5 gradient-text">Contact Me</h1>
                 <p className="text-center text-purple-500">Looking for get in touch with me? Please Submit the below form.</p>
                <label className="mt-4 block text-purple-500 w-1/2">

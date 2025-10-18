@@ -13,7 +13,7 @@ export default function Timeline(){
                         <ul className="list-disc pl-5 text-gray-300 text-sm leading-relaxed">
                             <li>Led a team of developers building scalable microservices and enterprise-level web apps
                                 using
-                                Java, Spring Boot, PL/SQL and Angular.
+                                Java, Spring, Hibernate, Lit, PL/SQL, Angular, and Cloud.
                             </li>
                             <li>Delivered solutions for top clients like <b>ING Belgium</b>, <b>Anthem Inc.</b> ,
                                 and <b>Maritz
@@ -27,6 +27,11 @@ export default function Timeline(){
                             <li>Mentored junior developers and enforced code quality using SonarQube and Git
                                 workflows.
                             </li>
+
+                            <li> Got a chance to work <b>on-site in Belgium for 2 years with ING client, </b> collaborating
+                                closely
+                                with cross-functional teams.
+                            </li>
                             <li>Followed agile methodologies, spring planning, poker, daily standups. Gathering all the
                                 requirements from stakeholders and planning the technical design flow.
                             </li>
@@ -37,10 +42,10 @@ export default function Timeline(){
                         <span
                             className="absolute -left-3 flex w-6 h-6 bg-purple-500 rounded-full ring-10 ring-gray-950"></span>
                         <h3 className="text-2xl font-semibold text-purple-300">Software Developer</h3>
-                        <p className="text-gray-400 text-sm mb-1">Polaris Financial Technology | 2010 – 2014</p>
+                        <p className="text-gray-400 text-sm mb-1">Polaris Financial Technology, India | 2010 – 2014</p>
                         <ul className="list-disc pl-5 text-gray-300 text-sm leading-relaxed">
                             <li>Developed and maintained core banking applications for <b>CITI Bank</b> using Java, JSP,
-                                Servlets, and PL/SQL.
+                                Servlets, Struts, Spring, Websphere, and PL/SQL.
                             </li>
                             <li>Optimized backend queries and improved application performance by 25% through effective
                                 data modeling.
