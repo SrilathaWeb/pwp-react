@@ -2,7 +2,7 @@ export default function About() {
     return (
         <>
             <section id="about" className="bg-gray-800 ">
-                <h2 className="text-4xl gradient-text text-center pt-5">About Me</h2>
+                <h2 className="text-4xl gradient-text text-center p-6">About Me</h2>
                 <div className="max-w-4xl mx-auto px-6 py-5">
                     <p className="text-gray-300 leading-relaxed mb-4">
                         <i className="fa-solid fa-location-dot text-cyan-400 mr-2"></i>
@@ -31,7 +31,7 @@ export default function About() {
 
                     <p className="text-gray-300 leading-relaxed mb-4">
                         <i className="fa-solid fa-code text-cyan-400 mr-2"></i>
-                        My expertise includes <b>Java, Spring Boot, Angular, React, Docker, AWS</b>, and <b>PL/SQL</b>.
+                        My expertise includes <b>Java, Spring Boot, Hibernate, Angular, React, Docker, AWS</b>, and <b>PL/SQL</b>.
                         I focus on designing clean, scalable, and cloud-native applications.
                     </p>
 
@@ -60,7 +60,7 @@ export default function About() {
                     </p>
 
                     <div className="mt-8">
-                        <a href="docs/Srilatha_FullStack_Resume.pdf"
+                        <a href="assets/Srilatha_FullStack_Resume.pdf"
                            className="bg-gradient-to-r from-cyan-500 to-purple-600 px-6 py-3 rounded-lg text-white font-semibold hover:opacity-90 transition">
                             <i className="fa-solid fa-download mr-2"></i>Download Resume
                         </a>
