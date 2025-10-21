@@ -1,5 +1,6 @@
 import {useEffect} from "react";
 import {useLocation} from "react-router";
+//import {Carousel} from "flowbite-react";
 
 const travelVlogs = [
     {
@@ -126,6 +127,7 @@ export default function VideoBlog() {
         const items = document.querySelectorAll("[data-carousel-item]");
         let index = 0;
 
+        console.log(scrollImages.length);
         if (items.length === 0) return;
         const interval = setInterval(() => {
             items.forEach((item, i) => {
@@ -163,6 +165,14 @@ export default function VideoBlog() {
                         )) }
                         </div>
                 </div>
+               {/* <div className="relative h-56 sm:h-64 xl:h-80 2xl:h-96">
+                    <Carousel slideInterval={5000}>
+                        {scrollImages.map((url,index) => (
+                                <img src={url} className="absolute block w-full h-full object-cover"
+                                     alt="Ballon Fiesta" id = {`image${index}`}/>
+                        ))}
+                    </Carousel>
+                </div>*/}
                 <div className="absolute inset-0 bg-black/50 flex flex-col justify-center items-center text-center px-6">
                     <h1 className="text-5xl font-bold gradient-text mb-4">Welcome to My Capturing Moments</h1>
                     <p className="text-gray-300 max-w-2xl">

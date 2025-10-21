@@ -79,7 +79,7 @@ export default function Skills(){
                             {skills.skills.map((skill, index) => (
                                 <div key={index}
                                      className="p-3 bg-purple-400 rounded-lg hover:bg-purple-700">
-                                    <img src={skill.icon} className="w-8 h-8 mx-auto mb-2"/>
+                                    <img src={skill.icon} className="w-8 h-8 mx-auto mb-2" alt={skill.name}/>
                                     <p>{skill.name}</p>
                                 </div>
                             ))}
@@ -89,7 +89,7 @@ export default function Skills(){
             </section>
             <div className="container mx-auto">
                 <h2 className="text-4xl gradient-text text-center mb-5">Soft Skills </h2>
-<div className="grid grid-cols-6 md:grid-cols-6 gap-4 text-center">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 text-center">
            {softSkills.map((skill, index) => (
              <div key={index} className="bg-gray-900 rounded-2xl inline-block m-2 shadow-lg p-6 hover:shadow-purple-500">
                <Tooltip content={skill.desc} style="light">
@@ -103,6 +103,6 @@ export default function Skills(){
            ))}
          </div>
             </div>
-            </>
-            )
-            }
+       </>
+    )
+}

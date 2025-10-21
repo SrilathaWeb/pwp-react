@@ -29,7 +29,7 @@ export function CustomNav (){
                 <div className="absolute inset-0 flex">
                      <img src="/SrilathaAlla.jpg" alt="Srilatha Alla" className="min-w-full h-auto banner shadow-2xl"/>
                 </div>
-                <nav className="absolute top-8 left-0 right-5 flex justify-center z-10 space-x-6">
+                <nav className=" absolute top-8 left-0 right-5 flex justify-center z-10 space-x-6 ">
                     <Navigation/>
                 </nav>
                 <div className="relative text-right z-10 ml-70">
