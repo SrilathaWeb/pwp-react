@@ -29,15 +29,15 @@ export function CustomNav (){
                 <div className="absolute inset-0 flex">
                      <img src="/SrilathaAlla.jpg" alt="Srilatha Alla" className="min-w-full h-auto banner shadow-2xl"/>
                 </div>
-                <nav className=" absolute top-8 left-0 right-5 flex justify-center z-10 space-x-6 ">
+                <nav className="absolute top-8 left-0 right-5 flex justify-center z-10 space-x-6 ">
                     <Navigation/>
                 </nav>
-                <div className="relative text-right z-10 ml-70">
+                <div className="relative text-right">
                     <h1
-                        className="text-5xl md:text-6xl font-bold gradient-text mb-3">Full Stack
+                        className="text-5xl md:text-6xl font-bold gradient-text">Full Stack
                         Developer</h1>
                     <p className="text-black text-lg max-w-2xl mx-auto mb-6">
-                        Hello, I’m <span className="text-purple-700 font-semibold">Srilatha Alla</span> — a passionate
+                        Hello, I’m <span className="text-purple-700 font-semibold">Srilatha</span> — a passionate
                         developer
                         with over 12 years of experience in front end & back end technologies. Worked on multiple
                         technologies.

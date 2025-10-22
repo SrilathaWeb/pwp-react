@@ -13,6 +13,7 @@ import Timeline from "./routes/timeline.tsx";
 import {CustomFooter} from "./layouts/custom-footer.tsx";
 import {CustomNav} from "./layouts/custom-nav.tsx";
 
+
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
       <BrowserRouter>
