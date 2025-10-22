@@ -2,7 +2,7 @@ export default function About() {
     return (
         <>
             <section id="about" className="bg-gray-800 ">
-                <h2 className="text-4xl gradient-text text-center p-6">About Me</h2>
+                <h2 className="text-4xl gradient-text text-center p-6 font-extrabold">About Me</h2>
                 <div className="max-w-4xl mx-auto px-6 py-5">
                     <p className="text-gray-300 leading-relaxed mb-4">
                         <i className="fa-solid fa-location-dot text-cyan-400 mr-2"></i>

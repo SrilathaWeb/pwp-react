@@ -61,7 +61,7 @@ export default function Skills(){
     return (
         <>
             <section id="skills" className="container mx-auto p-6">
-                <h2 className="text-4xl gradient-text text-center mb-5">Technical Skills </h2>
+                <h2 className="text-4xl gradient-text text-center mb-5 font-extrabold">Technical Skills </h2>
 
                 {allSkills.map((skills) => (
                     <>
@@ -88,17 +88,18 @@ export default function Skills(){
                 ))}
             </section>
             <div className="container mx-auto">
-                <h2 className="text-4xl gradient-text text-center mb-5">Soft Skills </h2>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 text-center">
+                <h2 className="text-4xl gradient-text text-center mb-5 font-extrabold">Soft Skills </h2>
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 gap-4 text-center">
            {softSkills.map((skill, index) => (
              <div key={index} className="bg-gray-900 rounded-2xl inline-block m-2 shadow-lg p-6 hover:shadow-purple-500">
                <Tooltip content={skill.desc} style="light">
-                 <img src={skill.image} alt={skill.name} className="w-16 h-16 mb-4 rounded-full shadow-md"/>
+                 {/*<img src={skill.image} alt={skill.name} className="w-16 h-16 mb-4 rounded-full shadow-md"/>*/}
+                   <h3 className="text-sm font-semibold text-purple-400 flex justify-center items-center space-x-2">
+                       <i className={`${skill.icon} fa-solid text-lg text-cyan-400`}/>
+                       <span>{skill.name}</span>
+                   </h3>
                </Tooltip>
-               <h3 className="text-sm font-semibold text-purple-400 flex justify-center items-center space-x-2">
-                 <i className={`${skill.icon} fa-solid text-lg text-cyan-400`}/>
-                 <span>{skill.name}</span>
-               </h3>
+
              </div>
            ))}
          </div>

@@ -3,7 +3,7 @@ export default function Timeline(){
         <>
 
             <section id="experience" className="mx-auto px-6 py-10 bg-gray-800 text-gray-200">
-                <h2 className="text-4xl font-bold text-center gradient-text mb-10">Professional Experience</h2>
+                <h2 className="text-4xl font-extrabold text-center gradient-text mb-10">Professional Experience</h2>
                 <ol className="relative border-l border-cyan-400 ml-6">
                     <li className="mb-12 ml-6">
                         <span

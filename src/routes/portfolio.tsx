@@ -53,7 +53,7 @@ export default function Portfolio () {
     return (
         <>
             <section id="portfolio" className="max-w-7xl mx-auto px-10 py-5">
-                <h2 className="text-4xl gradient-text text-center mb-10">My Projects</h2>
+                <h2 className="text-4xl gradient-text text-center mb-10 font-extrabold">My Projects</h2>
                 <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
 
                         {projects.map((project) => (

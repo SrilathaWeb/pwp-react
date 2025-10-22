@@ -189,10 +189,10 @@ export default function VideoBlog() {
                 </div>
             </section>
 
-            <div className=" bg-gray-500">
+            <div className=" bg-gray-600">
                 <section className="pt-10 text-center">
-                    <h1 className="text-4xl font-bold gradient-text mb-4">My Travel Vlogs</h1>
-                    <p className="text-gray-400 max-w-2xl mx-auto">
+                    <h1 className="text-4xl font-extrabold gradient-text mb-4">My Travel Vlogs</h1>
+                    <p className="text-purple-400 max-w-2xl mx-auto">
                         <i className="fa-solid fa-video text-cyan-400 mr-2"></i>
                         I love exploring new places and capturing those moments through my YouTube channel.
                         Join me on my journeys and experiences through
