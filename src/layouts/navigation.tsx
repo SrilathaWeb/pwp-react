@@ -18,29 +18,29 @@ export function Navigation() {
         { name: "SKILLS", path: "/skills" },
         { name: "PORTFOLIO", path: "/portfolio" },
         { name: "TIMELINE", path: "/timeline" },
+        { name: "TECHNICAL BLOG", path: "/technicalblog" },
         { name: "VIDEO BLOG", path: "/videoblog" },
         { name: "CONTACT", path: "/contact" },
     ];
 
     return (
-        <nav className="bg-transparent fixed top-0 left-0 right-0 z-50">
+        <nav className="bg-transparent top-0 ">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex items-center justify-between h-16">
+                <div className="flex items-center justify-between h-16 ">
 
-                   {/* <div className="flex-shrink-0 ">
+                   {/* <div className="flex-shrink-0 text-black top-0 left-0">
                         <NavLink
                             to="/"
-                            className="text-cyan-400 text-xl font-extrabold"
+                            className=" text-xl font-extrabold"
                             onClick={closeMenu}
                         >
                             Srilatha Alla
                         </NavLink>
-                    </div>
-*/}
+                    </div>*/}
                     <div className="md:hidden">
                         <button
                             onClick={toggleMenu}
-                            className="text-white border-2 bg-purple-600 focus:outline-none"
+                            className="text-white border-2 bg-purple-600 focus:outline-none "
                         >
                             {isOpen ? (
                                 <svg
@@ -94,7 +94,7 @@ export function Navigation() {
 
             {/* Mobile menu */}
             {isOpen && (
-                <div className="md:hidden px-2 pb-3 space-y-1">
+                <div className="md:hidden px-2 pb-3 space-y-1 fixed">
                     {navItems.map((item) => (
                         <NavLink
                             key={item.name}

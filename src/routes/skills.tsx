@@ -22,6 +22,7 @@ const frontendSkills:Skill[] = [
     { name: 'Node JS', icon: '/icons/NodeJS-Dark.svg' },
     { name: 'Express JS', icon: '/icons/ExpressJS-Dark.svg' },
     { name: 'Lit', icon: '/icons/Lit-Dark.svg' },
+    {name:'TypeScript' , icon: '/icons/TypeScript.svg' },
 ];
 
 const databaseSkills:Skill[] = [
@@ -31,6 +32,8 @@ const databaseSkills:Skill[] = [
 ];
 
 const deploymentSkills:Skill[] = [
+    {name:'Apache Tomcat', icon:'/icons/apache-tomcat.png'},
+    {name:'WebSphere', icon:'/icons/websphere.png'},
     { name: 'Jenkins', icon: '/icons/Jenkins-Dark.svg' },
     { name: 'Docker', icon: '/icons/Docker.svg' },
 ];

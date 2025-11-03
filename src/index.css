@@ -16,15 +16,16 @@ b{
 	}
  
 .code-banner {
-	background-image: url("/public/coding.png");
-	background-size: cover; /* Ensures the image covers the entire header */
-	background-position: center; /* Centers the image */
-	height: 140px; /* Set a specific height */
+	background-image: url("/public/img_1.png");
+	background-size: cover;
+	background-position: center;
+	height: 140px;
 	color: white;
 	text-align: center;
 	padding: 50px 20px;
+	
 	}
 
 .code-banner:hover {
-	transform: scale(1.05); /* Slight zoom on hover */
+/*	transform: scale(1.05); /* Slight zoom on hover */
 	}

@@ -32,11 +32,11 @@ export function CustomNav (){
                 <nav className="absolute top-8 left-0 right-5 flex justify-center z-10 space-x-6 ">
                     <Navigation/>
                 </nav>
-                <div className="relative text-right">
+                <div className="relative md:left-50 sm:text-center p-2">
                     <h1
                         className="text-5xl md:text-6xl font-bold gradient-text">Full Stack
                         Developer</h1>
-                    <p className="text-black text-lg max-w-2xl mx-auto mb-6">
+                        <p className="text-black text-lg max-w-2xl mx-auto mb-6">
                         Hello, I’m <span className="text-purple-700 font-semibold">Srilatha</span> — a passionate
                         developer
                         with over 12 years of experience in front end & back end technologies. Worked on multiple
