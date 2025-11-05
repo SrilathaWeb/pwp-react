@@ -75,7 +75,13 @@ export default function Portfolio () {
                         <>
                         <div className="bg-gray-800 rounded-xl p-5 shadow-lg glow hover:-translate-y-1 transition hover:bg-purple-900 ">
                             <h3 className="text-lg font-bold text-cyan-400">{project.projectName}</h3>
-                            <p className="text-gray-400 text-sm mb-2">{project.companyName} <span className="">({project.date})</span></p>
+                            <div className="flex items-center justify-between">
+                                <h2 className="text-gray-400 text-sm mb-2">{project.companyName}</h2>
+                                <div className="flex items-center text-gray-500 text-sm">
+                                    <i className="fa fa-calendar bg-blue-700 text-white p-1 rounded" aria-hidden="true"></i>
+                                    <span className="ml-2">({project.date})</span>
+                                </div>
+                            </div>
                             <p className="text-gray-300 text-sm">  {project.description} <b> {project.technology} .</b>
                                 </p>
                         </div>

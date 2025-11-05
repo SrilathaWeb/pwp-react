@@ -5,6 +5,7 @@ import React, {useState} from "react";
 import {type Blog, technicalBlogData} from "./technical_blog_data.tsx";
 //import {DivSlider} from "./div_slider.tsx";
 import {Badge, Button, Card, ChevronDownIcon, ChevronUpIcon} from "flowbite-react";
+import TypewriterText from "../typewriter.tsx";
 
 
 
@@ -25,9 +26,10 @@ export const TechnicalBlogList: React.FC = () => {
 
     return (
         <div className="container mx-auto py-10 px-4">
-            <h1 className="text-3xl md:text-4xl font-bold text-center mb-8 gradient-text">
-                Technical Blog
-            </h1>
+
+               <TypewriterText text="Technical Blog" speed={120} pause={1000} style="text-3xl md:text-4xl font-extrabold text-center mb-8 gradient-text"/>
+
+
 
             <div className="mb-6 flex justify-center">
                 <input

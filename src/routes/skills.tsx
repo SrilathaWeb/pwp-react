@@ -63,6 +63,7 @@ const softSkills= [
 export default function Skills(){
     return (
         <>
+
             <section id="skills" className="container mx-auto p-6">
                 <h2 className="text-4xl gradient-text text-center mb-5 font-extrabold">Technical Skills </h2>
 

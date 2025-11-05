@@ -1,6 +1,7 @@
 
 import {useLocation} from "react-router";
 import {Navigation} from "./navigation.tsx";
+import TypewriterText from "../routes/typewriter.tsx";
 
 export function CustomNav (){
     const location=useLocation();
@@ -33,9 +34,7 @@ export function CustomNav (){
                     <Navigation/>
                 </nav>
                 <div className="relative md:left-50 sm:text-center p-2">
-                    <h1
-                        className="text-5xl md:text-6xl font-bold gradient-text">Full Stack
-                        Developer</h1>
+                    <TypewriterText text="Full Stack Developer" speed={120} pause={1000} style="text-5xl md:text-6xl font-bold gradient-text" />
                         <p className="text-black text-lg max-w-2xl mx-auto mb-6">
                         Hello, I’m <span className="text-purple-700 font-semibold">Srilatha</span> — a passionate
                         developer

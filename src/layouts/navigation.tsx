@@ -1,6 +1,7 @@
 import { NavLink } from "react-router";
 import { useState } from "react";
 
+
 export function Navigation() {
     const [isOpen, setIsOpen] = useState(false);
 
@@ -37,6 +38,7 @@ export function Navigation() {
                             Srilatha Alla
                         </NavLink>
                     </div>*/}
+
                     <div className="md:hidden">
                         <button
                             onClick={toggleMenu}
