@@ -14,6 +14,7 @@ import {CustomFooter} from "./layouts/custom-footer.tsx";
 import {CustomNav} from "./layouts/custom-nav.tsx";
 import {TechnicalBlogList} from "./routes/technicalblog/technical_blog_list.tsx";
 import TechnicalBlogPost from "./routes/technicalblog/technical_blog_post.tsx";
+import Roles from "./routes/roles.tsx";
 
 
 createRoot(document.getElementById('root')!).render(
@@ -26,6 +27,7 @@ createRoot(document.getElementById('root')!).render(
                 <Route path={'/contact'} element={<Contact/>}/>
                 <Route path={'/about'} element={<About/>}/>
                 <Route path ={'/skills'} element={<Skills/>}/>
+                <Route path ={'/roles'} element={<Roles/>}/>
                 <Route path={'/portfolio'} element={<Portfolio/>}/>
                 <Route path={'/timeline'} element={<Timeline/>} />
                 <Route path={'/videoblog'} element={<VideoBlog/>}/>

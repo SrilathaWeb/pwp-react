@@ -17,6 +17,7 @@ export function Navigation() {
         { name: "HOME", path: "/" },
         { name: "ABOUT", path: "/about" },
         { name: "SKILLS", path: "/skills" },
+        { name:"ROLES", path: "/roles" },
         { name: "PORTFOLIO", path: "/portfolio" },
         { name: "TIMELINE", path: "/timeline" },
         { name: "TECHNICAL BLOG", path: "/technicalblog" },
@@ -110,5 +111,6 @@ export function Navigation() {
                 </div>
             )}
         </nav>
+
     );
 }

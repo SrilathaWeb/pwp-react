@@ -1,31 +1,23 @@
-import CanvasPage from "./canvas-blog.tsx";
-
 export default function About() {
     return (
         <>
 
             <section id="about" className="bg-gray-800 ">
-                <div className="left-0 absolute ml-10">
-
-                    <CanvasPage/>
-                </div>
                 <h2 className="text-4xl gradient-text text-center p-6 font-extrabold">About Me</h2>
                 <div className="max-w-4xl mx-auto px-6 py-5">
                     <p className="text-gray-300 leading-relaxed mb-4">
                         <i className="fa-solid fa-location-dot text-cyan-400 mr-2"></i>
-                        I was born in <b> Telangana, India</b>, and raised in <b>Hyderabad</b>, where my
-                        passion for technology and creativity began to flourish.
+                        I was born in <b> Telangana, India</b>.
                     </p>
 
                     <p className="text-gray-300 leading-relaxed mb-4">
                         <i className="fa-solid fa-graduation-cap text-purple-400 mr-2"></i>
-                        I earned my <b>Bachelor’s degree in Information Technology</b> from <b>Sridevi Women’s
-                        Engineering College, JNTU University</b>.
+                        I earned my <b>Bachelor’s degree in Information Technology</b> from <b> JNTU University</b>.
                     </p>
 
                     <p className="text-gray-300 leading-relaxed mb-4">
                         <i className="fa-solid fa-briefcase text-cyan-400 mr-2"></i>
-                        With over <b>12 years of experience</b> in full-stack development, I’ve worked
+                        As a full-stack developer, I’ve worked
                         at <b>Polaris</b> and <b>Cognizant</b> for global clients such as <b>CITI Bank</b>, <b>Maritz
                         Inc.</b>, <b>Anthem Inc.</b>, and <b>ING</b>.
                     </p>
@@ -66,12 +58,7 @@ export default function About() {
                         love capturing cultures and experiences that inspire my creativity and perspective.
                     </p>
 
-                    <div className="mt-8">
-                        <a href="assets/Srilatha_FullStack_Resume.pdf"
-                           className="bg-gradient-to-r from-cyan-500 to-purple-600 px-6 py-3 rounded-lg text-white font-semibold hover:opacity-90 transition">
-                            <i className="fa-solid fa-download mr-2"></i>Download Resume
-                        </a>
-                    </div>
+
                 </div>
             </section>
         </>

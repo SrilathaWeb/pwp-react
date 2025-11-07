@@ -9,7 +9,7 @@ const CanvasPage = () => {
         const canvas = canvasRef.current;
         const ctx = canvas.getContext("2d");
         const img = new Image();
-        img.src = "img_4.png";
+        img.src = "img_8.png";
         imageRef.current = img;
 
         img.onload = () => {
@@ -53,12 +53,12 @@ const CanvasPage = () => {
     }, []);
 
     return (
-        <div className="flex flex-col items-center justify-center h-screen">
+        <div className=" ">
             <canvas
                 ref={canvasRef}
-                width={200}
-                height={200}
-                className=" rounded shadow-md"
+                width={120}
+                height={120}
+                className=" rounded-full w-40 h-40 shadow-md bg-transparent bg-black "
             />
 
         </div>
