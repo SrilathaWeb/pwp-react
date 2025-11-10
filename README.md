@@ -1,3 +1,5 @@
+# This is the website to showcase my skills, portfolio, roles and my blogs.
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
