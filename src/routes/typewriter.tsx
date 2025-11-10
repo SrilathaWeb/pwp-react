@@ -8,7 +8,7 @@ const TypewriterText = ({ text = "", speed = 120,pause=1000 ,style=""}) => {
 
         if (!text) return;
 
-        let timeout;
+        let timeout: number
         const handleTyping = () =>{
             if(!isDeleting){
                 if(displayedText.length <  text.length){
