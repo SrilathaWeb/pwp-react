@@ -25,4 +25,4 @@ jobs:
       - name: Deploy to server
         run: |
           ssh-keyscan -H srilathaa.com >> ~/.ssh/known_hosts 
-          scp -r ./dist/* gkephart@srilathaa.com:/var/www/srilathaa.com/html
+          scp -r ./dist/* salla@srilathaa.com:/var/www/srilathaa.com/html
