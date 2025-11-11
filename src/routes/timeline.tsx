@@ -7,6 +7,34 @@ export default function Timeline(){
                 <ol className="relative border-l border-cyan-400 ml-6">
                     <li className="mb-12 ml-6">
                         <span
+                            className="absolute -left-3 flex w-6 h-6 bg-pink-500 rounded-full ring-10 ring-gray-950"></span>
+                        <h3 className="text-2xl font-semibold text-pink-300">Deep Dive (Full stack web development)</h3>
+                        <p className="text-gray-400 text-sm mb-1">
+                            Central New Mexico Community College,
+                            USA | Nov - Dec
+                            2025</p>
+                        <ul className="list-disc pl-5 text-gray-300 text-sm leading-relaxed">
+                           <li> PWP (Personal Web Portfolio):
+                            Designed and built a fully responsive portfolio website showcasing projects, skills, and blogs.
+
+                            Built using <b>React Router, Tailwind CSS, Vite </b>
+
+                            Includes project search, navigation, and Markdown blog integration.
+                           </li>
+                            <li>
+                                 WanderList (Bucket List) App used by travel people who are interested in adventures trips. Built
+                                using <b> React, Tailwind CSS, Express JS, PostgreSQL  </b>
+                            </li>
+                            <li>
+                            🏆 Hackathon Participation: Won the first prize in Hackathon.
+                            Developed an innovative AI optimization platform in a 30-hour hackathon sprint.
+                                Built using <b> React Router, Tailwind CSS, LLM Studio </b>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li className="mb-12 ml-6">
+                        <span
                             className="absolute -left-3 flex  w-6 h-6 bg-cyan-500 rounded-full ring-10 ring-gray-950"></span>
                         <h3 className="text-2xl font-semibold text-cyan-300">Lead Full Stack Developer</h3>
                         <p className="text-gray-400 text-sm mb-1">Cognizant Technology Solutions | 2014 – 2023</p>
@@ -55,14 +83,22 @@ export default function Timeline(){
                         </ul>
                     </li>
 
-                    <li className="ml-6">
+                    <li className="mb-12 ml-6">
                         <span
-                            className="absolute -left-3 flex w-6 h-6 bg-pink-500 rounded-full ring-10 ring-gray-950"></span>
-                        <h3 className="text-2xl font-semibold text-pink-300">Bachelor of Technology (IT)</h3>
+                            className="absolute -left-3 flex w-6 h-6 bg-cyan-500 rounded-full ring-10 ring-gray-950"></span>
+                        <h3 className="text-2xl font-semibold text-cyan-300">Bachelor of Technology (IT)</h3>
                         <p className="text-gray-400 text-sm mb-1">Sridevi Women’s Engineering College, JNTU University,
                             India |
                             2009</p>
                         <p className="text-gray-300 text-sm">Graduated and specializing in Information Technology.</p>
+                    </li>
+                    <li className="ml-6">
+                        <span
+                            className="absolute -left-3 flex w-6 h-6 bg-pink-500 rounded-full ring-10 ring-gray-950"></span>
+                        <h3 className="text-2xl font-semibold text-pink-300">Diploma (EIE)</h3>
+                        <p className="text-gray-400 text-sm mb-1">SBTET, Hyderabad, India |
+                            2006</p>
+                        <p className="text-gray-300 text-sm">Graduated and specializing in Electronics and Instrumentation Engineering.</p>
                     </li>
                 </ol>
             </section>

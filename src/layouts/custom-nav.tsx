@@ -44,7 +44,7 @@ export function CustomNav (){
                        className="bg-gradient-to-r from-cyan-500 to-purple-600 px-8 py-3 text-white rounded-lg font-semibold hover:opacity-90 transition">View
                         My Work</a>*/}
                     <div className="mt-8">
-                        <a href="https://docs.google.com/document/d/1F2FGWVH6vHch4Fx_U2j73NC_RNEDe0Rz/edit?usp=drive_link&ouid=116292810383739847062&rtpof=true&sd=true"
+                        <a href="https://drive.google.com/file/d/1KWTlwPx8nRpVHX15J7hkci0yjisvGoY0/view"
                            className="bg-gradient-to-r from-cyan-500 to-purple-600 px-6 py-3 rounded-lg text-white font-semibold hover:opacity-90 transition" target="_blank">
                             <i className="fa-solid fa-download mr-2"></i>Download Resume
                         </a>

@@ -53,9 +53,9 @@ export default function RolesSection() {
     return (
         <section
             id="roles"
-            className="py-16 bg-gradient-to-br from-cyan-950 via-purple-900/40 to-cyan-900 text-white"
+            className="py-5 bg-gradient-to-br from-cyan-950 via-purple-900/40 to-cyan-900 text-white"
         >
-            <div className="container mx-auto px-6">
+            <div className="container mx-auto">
                 <h2 className="text-4xl font-bold text-center mb-10 bg-clip-text">
                     <TypewriterText text="Roles I Can Do" style="text-cyan-300"/>
                 </h2>

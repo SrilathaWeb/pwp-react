@@ -14,6 +14,13 @@ const projects:portfolio[] = [
         technology: 'React Router, Node.js, Express.js, PostgreSQL'
     },
     {
+        projectName: 'OPTI Green - Hackathop',
+        companyName: 'NM Tech Talks',
+        date:"Nov 8, 9 2025",
+        description: 'OPTI Green is an intelligent dashboard that analyzes and optimizes LLM (Large Language Model) token usage to reduce API costs and compute energy consumption. It helps developers and organizations make AI usage more efficient, sustainable, and transparent — by reducing the token.',
+        technology: 'React Router, Node.js, LLM studio, Python, Typescript'
+    },
+    {
         projectName: 'Personal Website',
         companyName: 'CNM',
         date:"Sep 2025 to Nov 2025",
