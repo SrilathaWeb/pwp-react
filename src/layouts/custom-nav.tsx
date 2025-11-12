@@ -34,7 +34,12 @@ export function CustomNav (){
                     <Navigation/>
                 </nav>
                 <div className="relative md:left-50 sm:text-center p-2">
-                    <TypewriterText text="Full Stack Developer" speed={120} pause={1000} style="text-5xl md:text-6xl font-bold gradient-text m-10" />
+                    <TypewriterText text="Full Stack Developer" speed={120} pause={1000}
+                                    style="text-5xl md:text-6xl font-bold
+    bg-gradient-to-r from-purple-700  to-pink-500
+    bg-clip-text text-transparent
+    drop-shadow-[0_2px_8px_rgba(0,0,0,0.3)]
+    m-10" />
                         <p className="text-black text-lg max-w-2xl mx-auto mb-6">
                         Hello, I’m <span className="text-purple-800 font-semibold text-3xl">Srilatha</span> — a passionate software
                         developer. Experience in front end & back end technologies. Worked with multi national companies.
