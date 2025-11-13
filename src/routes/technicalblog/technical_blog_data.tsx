@@ -48,7 +48,7 @@ export const technicalBlogData: Blog[] = [
         id: "hibernate",
         title: "Understand the Hibernate Features",
         tags: ["Hibernate", "Back End","Java", "Spring Boot JPA"],
-        file: "/markdown/post/springboot.md",
+        file: "/markdown/post/hibernate.md",
     },
     {
         id: "rest",
@@ -63,6 +63,12 @@ export const technicalBlogData: Blog[] = [
         file: "/markdown/post/microservices.md",
     },
     {
+        id: "golang",
+        title: "Go Language Features",
+        tags: ["GO", "Back End"],
+        file: "/markdown/post/golang.md",
+    },
+    {
         id: "ai",
         title: "Understanding Artificial Intelligence (AI)",
         tags: ["AI", "Machine Learning", "Data"],
@@ -71,7 +77,7 @@ export const technicalBlogData: Blog[] = [
     {
         id: "docker",
         title: "Create, Build, and Deploy with Docker",
-        tags: ["Docker", "Containers", "DevOps"],
+        tags: ["Docker", "Containers", "DevOps","CI/CD"],
         file: "/markdown/post/docker.md",
     },
     {
@@ -85,6 +91,12 @@ export const technicalBlogData: Blog[] = [
         title: "Working with Flowbite in Frontend Apps",
         tags: ["Frontend", "UI", "Flowbite","CSS","Styles","React"],
         file: "/markdown/post/flowbite.md",
+    },
+    {
+        id: "tailwind",
+        title: "Working with Tailwind CSS in Frontend Apps",
+        tags: ["Frontend", "UI", "Tailwind","CSS","Styles"],
+        file: "/markdown/post/tailwind.md",
     },
     {
         id: "angular",
@@ -106,7 +118,31 @@ export const technicalBlogData: Blog[] = [
         file: "/markdown/post/http_rest.md",
     },
     {
-        id: "intro-to-express",
+        id: "html",
+        title: "Getting Started with HTML",
+        tags: ["HTML", "Node.js", "FrontEnd"],
+        file: "/markdown/post/html.md",
+    },
+    {
+        id: "nodejs",
+        title: "Getting Started with Node JS",
+        tags: [ "Node.js", "Backend"],
+        file: "/markdown/post/nodejs.md",
+    },
+    {
+        id: "typescript",
+        title: "TypeScript",
+        tags: ["Typescript", "Backend"],
+        file: "/markdown/post/typescript.md",
+    },
+    {
+        id: "lit",
+        title: "LIT",
+        tags: ["LIT", "Frontend"],
+        file: "/markdown/post/lit.md",
+    },
+    {
+        id: "express",
         title: "Getting Started with Express",
         tags: ["Express", "Node.js", "Backend"],
         file: "/markdown/post/intro-to-express.md",
@@ -178,6 +214,12 @@ export const technicalBlogData: Blog[] = [
         file: "/markdown/post/sql.md",
     },
     {
+        id: "oracle",
+        title: "Oracle Guide",
+        tags: ["Oracle", "Database"],
+        file: "/markdown/post/oracle.md",
+    },
+    {
         id: "persona",
         title: "Creating User Personas for Design",
         tags: ["UX", "Design Thinking", "Personas"],
@@ -200,6 +242,24 @@ export const technicalBlogData: Blog[] = [
         title: "UI/UX Design Principles for Developers",
         tags: ["UI", "UX", "Design"],
         file: "/markdown/post/ui-ux.md",
+    },
+    {
+        id: "tomcat",
+        title: "Tomcat Server setup",
+        tags: ["Tomcat", "Deployment"],
+        file: "/markdown/post/tomcat.md",
+    },
+    {
+        id: "websphere",
+        title: "Websphere setup",
+        tags: ["WebSphere", "Deployment"],
+        file: "/markdown/post/websphere.md",
+    },
+    {
+        id: "jenkins",
+        title: "Jenkins for Deployment",
+        tags: ["Jenkins", "Deployment","CI/CD"],
+        file: "/markdown/post/jenkins.md",
     },
 
 ];

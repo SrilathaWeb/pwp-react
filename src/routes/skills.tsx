@@ -1,41 +1,43 @@
 import {Tooltip} from "flowbite-react";
+import {Link} from "react-router";
 
 type Skill = {
     name: string;
     icon: string;
+    href: string;
 };
 const backendSkills :Skill[] = [
-    { name: 'Java', icon: '/icons/Java-Dark.svg' },
-    { name: 'Spring', icon: '/icons/Spring-Dark.svg' },
-    { name: 'Hibernate', icon: '/icons/Hibernate-Dark.svg' },
-    { name: 'REST', icon: '/icons/REST.png' },
-    { name: 'Microservices', icon: '/icons/microservices.png' },
-    { name: 'GoLang', icon: '/icons/GoLang.svg' },
+    { name: 'Java', icon: '/icons/Java-Dark.svg', href:'/post/java' },
+    { name: 'Spring', icon: '/icons/Spring-Dark.svg' , href:'/post/spring-boot'},
+    { name: 'Hibernate', icon: '/icons/Hibernate-Dark.svg' , href:'/post/hibernate' },
+    { name: 'REST', icon: '/icons/REST.png' , href:'/post/rest'},
+    { name: 'Microservices', icon: '/icons/microservices.png' , href:'/post/microservices'},
+    { name: 'GoLang', icon: '/icons/GoLang.svg', href:'/post/golang' },
 ];
 
 const frontendSkills:Skill[] = [
-    { name: 'HTML', icon: '/icons/HTML.svg' },
-    { name: 'CSS', icon: '/icons/CSS.svg' },
-    { name: 'Angular', icon: '/icons/Angular-Dark.svg' },
-    { name: 'React', icon: '/icons/React-Dark.svg' },
-    { name: 'TailWind CSS', icon: '/icons/TailwindCSS-Dark.svg' },
-    { name: 'Node JS', icon: '/icons/NodeJS-Dark.svg' },
-    { name: 'Express JS', icon: '/icons/ExpressJS-Dark.svg' },
-    { name: 'Lit', icon: '/icons/Lit-Dark.svg' },
-    {name:'TypeScript' , icon: '/icons/TypeScript.svg' },
+    { name: 'HTML', icon: '/icons/HTML.svg' , href:'/post/html'},
+    { name: 'CSS', icon: '/icons/CSS.svg' , href:'/post/flowbite'},
+    { name: 'Angular', icon: '/icons/Angular-Dark.svg' , href:'/post/angular'},
+    { name: 'React', icon: '/icons/React-Dark.svg' , href:'/post/react-intro'},
+    { name: 'TailWind CSS', icon: '/icons/TailwindCSS-Dark.svg', href:'/post/tailwind' },
+    { name: 'Node JS', icon: '/icons/NodeJS-Dark.svg', href:'/post/nodejs' },
+    { name: 'Express JS', icon: '/icons/ExpressJS-Dark.svg' , href:'/post/express'},
+    { name: 'Lit', icon: '/icons/Lit-Dark.svg' , href:'/post/lit'},
+    {name:'TypeScript' , icon: '/icons/TypeScript.svg' , href:'/post/typescript'},
 ];
 
 const databaseSkills:Skill[] = [
-    { name: 'MySQL', icon: '/icons/MySQL-Dark.svg' },
-    { name: 'PostgreSQL', icon: '/icons/PostgreSQL-Dark.svg' },
-    { name: 'Oracle', icon: '/icons/oracle.png' },
+    { name: 'MySQL', icon: '/icons/MySQL-Dark.svg', href:'/post/sql' },
+    { name: 'PostgreSQL', icon: '/icons/PostgreSQL-Dark.svg', href:'/post/ddl' },
+    { name: 'Oracle', icon: '/icons/oracle.png' , href:'/post/oracle'},
 ];
 
 const deploymentSkills:Skill[] = [
-    {name:'Apache Tomcat', icon:'/icons/apache-tomcat.png'},
-    {name:'WebSphere', icon:'/icons/websphere.png'},
-    { name: 'Jenkins', icon: '/icons/Jenkins-Dark.svg' },
-    { name: 'Docker', icon: '/icons/Docker.svg' },
+    {name:'Apache Tomcat', icon:'/icons/apache-tomcat.png', href:'/post/tomcat'},
+    {name:'WebSphere', icon:'/icons/websphere.png', href:'/post/websphere'},
+    { name: 'Jenkins', icon: '/icons/Jenkins-Dark.svg' , href:'/post/jenkins'},
+    { name: 'Docker', icon: '/icons/Docker.svg', href:'/post/docker' },
 ];
 
 const allSkills  = [
@@ -81,11 +83,11 @@ export default function Skills(){
                         <div
                             className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2 text-center p-5">
                             {skills.skills.map((skill, index) => (
-                                <div key={index}
+                                <Link key={index} to={skill.href}
                                      className="p-3 bg-purple-400 rounded-lg hover:bg-purple-700">
-                                    <img src={skill.icon} className="w-8 h-8 mx-auto mb-2" alt={skill.name}/>
+                                    <img src={skill.icon} className="w-8 h-8 mx-auto mb-2" alt={skill.name} />
                                     <p>{skill.name}</p>
-                                </div>
+                                </Link>
                             ))}
                         </div>
                     </>
