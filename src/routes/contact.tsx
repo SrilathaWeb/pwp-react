@@ -26,7 +26,7 @@ export default function Contact() {
                     <span>LinkedIn</span>
                 </a>
                 <a
-                    href="https://github.com/"
+                    href="https://github.com/SrilathaWeb"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center space-x-3 hover:opacity-80 transition"

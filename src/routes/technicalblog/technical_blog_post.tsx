@@ -123,7 +123,6 @@ export default function TechnicalBlogPost() {
                         td: (props) => <td className="px-4 py-2" {...props} />,
                     }}
                 >
-                    {/* ✅ Ensure content is a single string */}
                     {content ?? ""}
                 </ReactMarkdown>
             </div>

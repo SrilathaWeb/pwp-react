@@ -11,9 +11,9 @@ export default function Timeline(){
                 <div className="flex flex-col  pl-6  h-full space-y-10">
 
 
-                    <div className="absolute h-full w-1 bg-cyan-400 ml-2"></div>
 
                     <div className="flex items-start space-x-4">
+                        <div className="absolute h-380 md:h-200 w-1 bg-cyan-400 ml-2"></div>
 
                         <div className="flex-shrink-0 mt-1">
                             <div className="relative w-5 h-5 rounded-full bg-pink-500 ring-4 ring-black"></div>
