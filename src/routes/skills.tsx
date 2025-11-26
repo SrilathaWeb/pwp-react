@@ -194,7 +194,7 @@ const SoftSkillScroll: React.FC<SoftSkillScrollProps> = ({ skills }) => {
     // Duplicate skills for seamless infinite scroll effect
     const scrollingSkills = [...skills, ...skills];
 
-    const speed = '60s';
+    const speed = '30s';
     const animationName = 'auto-scroll-skills';
 
     // Injecting keyframes and classes using <style> tag
@@ -206,11 +206,11 @@ const SoftSkillScroll: React.FC<SoftSkillScrollProps> = ({ skills }) => {
                 from { transform: translateX(0); }
                 to { transform: translateX(-50%); }
             }
-            
+
             .animate-soft-scroll {
                 animation: ${animationName} ${speed} linear infinite;
                 /* Note: width must be 200% when doubling the items */
-                width: 200%; 
+                width: 200%;
                 display: flex;
                 flex-wrap: nowrap;
             }
@@ -219,16 +219,17 @@ const SoftSkillScroll: React.FC<SoftSkillScrollProps> = ({ skills }) => {
     );
 
     return (
-        <>
-            <div className="bg-gray-800">
-            <h2 className="text-3xl sm:text-4xl gradient-text text-center mb-3 font-extrabold px-4">Soft Skills</h2>
+        <section className="bg-gray-800 py-6">
+            <h2 className="text-3xl sm:text-4xl gradient-text text-center mb-6 font-extrabold px-4">Soft Skills</h2>
             {styleTag}
-            <div className="overflow-hidden py-6 rounded-xl shadow-2xl">
-                <div className={`animate-soft-scroll flex flex-nowrap items-stretch hidden md:flex`}>
+
+            {/* Scrolling carousel for both mobile and desktop */}
+            <div className="overflow-hidden py-6 rounded-xl shadow-2xl mx-4 md:mx-0">
+                <div className="animate-soft-scroll flex flex-nowrap items-stretch">
                     {scrollingSkills.map((skill, index) => (
                         <div
                             key={index}
-                            className="flex-shrink-0 w-64 m-2 p-5 bg-gray-900 rounded-xl shadow-lg transition-shadow duration-300 hover:shadow-cyan-500/50 border border-gray-700 h-full"
+                            className="flex-shrink-0 w-56 sm:w-64 m-2 p-5 bg-gray-900 rounded-xl shadow-lg transition-shadow duration-300 hover:shadow-cyan-500/50 border border-gray-700 h-full"
                         >
                             {/* Using the custom Tooltip component */}
                             <Tooltip content={skill.desc}>
@@ -239,7 +240,6 @@ const SoftSkillScroll: React.FC<SoftSkillScrollProps> = ({ skills }) => {
                                         <h3 className="text-lg font-semibold text-purple-400">{skill.name}</h3>
                                     </div>
                                     {/* Description */}
-                                    {/* Removed line-clamp-2 to show the first few words more clearly, though the full desc is in the tooltip */}
                                     <p className="text-sm text-gray-300">{skill.desc}</p>
                                 </div>
                             </Tooltip>
@@ -247,26 +247,7 @@ const SoftSkillScroll: React.FC<SoftSkillScrollProps> = ({ skills }) => {
                     ))}
                 </div>
             </div>
-
-            {/* Mobile/Tablet Responsive Grid for Soft Skills */}
-            <div className="md:hidden bg-gray-800 px-4 pb-6">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    {softSkills.map((skill, index) => (
-                        <div
-                            key={index}
-                            className="p-4 bg-gray-900 rounded-xl shadow-lg border border-gray-700 transition-shadow duration-300 hover:shadow-cyan-500/50"
-                        >
-                            <div className="flex items-center space-x-3 mb-2">
-                                <i className={`${skill.icon} text-xl text-cyan-400`} />
-                                <h3 className="text-base font-semibold text-purple-400">{skill.name}</h3>
-                            </div>
-                            <p className="text-xs text-gray-300">{skill.desc}</p>
-                        </div>
-                    ))}
-                </div>
-            </div>
-            </div>
-        </>
+        </section>
     );
 };
 
