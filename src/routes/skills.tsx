@@ -101,8 +101,8 @@ type ObserverOptions = {
     threshold?: number | number[];
 };
 
-const useOnScreen = (options: ObserverOptions): [React.RefObject<HTMLDivElement>, boolean] => {
-    const ref = useRef<HTMLDivElement>(null);
+const useOnScreen = (options: ObserverOptions): [React.RefObject<HTMLDivElement | null>, boolean] => {
+    const ref = useRef<HTMLDivElement | null>(null);
     const [isIntersecting, setIntersecting] = useState(false);
 
     useEffect(() => {
@@ -220,11 +220,11 @@ const SoftSkillScroll: React.FC<SoftSkillScrollProps> = ({ skills }) => {
 
     return (
         <>
-            <div className="bg-gray-800 ">
-            <h2 className="text-4xl gradient-text text-center mb-3 font-extrabold">Soft Skills</h2>
+            <div className="bg-gray-800">
+            <h2 className="text-3xl sm:text-4xl gradient-text text-center mb-3 font-extrabold px-4">Soft Skills</h2>
             {styleTag}
             <div className="overflow-hidden py-6 rounded-xl shadow-2xl">
-                <div className={`animate-soft-scroll flex flex-nowrap items-stretch`}>
+                <div className={`animate-soft-scroll flex flex-nowrap items-stretch hidden md:flex`}>
                     {scrollingSkills.map((skill, index) => (
                         <div
                             key={index}
@@ -243,6 +243,24 @@ const SoftSkillScroll: React.FC<SoftSkillScrollProps> = ({ skills }) => {
                                     <p className="text-sm text-gray-300">{skill.desc}</p>
                                 </div>
                             </Tooltip>
+                        </div>
+                    ))}
+                </div>
+            </div>
+
+            {/* Mobile/Tablet Responsive Grid for Soft Skills */}
+            <div className="md:hidden bg-gray-800 px-4 pb-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    {softSkills.map((skill, index) => (
+                        <div
+                            key={index}
+                            className="p-4 bg-gray-900 rounded-xl shadow-lg border border-gray-700 transition-shadow duration-300 hover:shadow-cyan-500/50"
+                        >
+                            <div className="flex items-center space-x-3 mb-2">
+                                <i className={`${skill.icon} text-xl text-cyan-400`} />
+                                <h3 className="text-base font-semibold text-purple-400">{skill.name}</h3>
+                            </div>
+                            <p className="text-xs text-gray-300">{skill.desc}</p>
                         </div>
                     ))}
                 </div>

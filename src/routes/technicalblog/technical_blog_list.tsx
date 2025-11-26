@@ -6,6 +6,7 @@ import {type Blog, technicalBlogData} from "./technical_blog_data.tsx";
 //import {DivSlider} from "./div_slider.tsx";
 import {Badge, Button, Card, ChevronDownIcon, ChevronUpIcon} from "flowbite-react";
 import TypewriterText from "../typewriter.tsx";
+import { Navigation } from "../../layouts/custom-nav.tsx";
 
 
 
@@ -25,9 +26,30 @@ export const TechnicalBlogList: React.FC = () => {
 
 
     return (
-        <div className="container mx-auto py-10 px-4">
+        <>
+            {/* Banner Section */}
+            <section className="relative h-64 sm:h-72 md:h-80 bg-gradient-to-br from-purple-600 via-indigo-600 to-blue-600 flex items-center justify-center">
+                {/* Navigation */}
+                <nav className="absolute top-4 md:top-8 left-1/2 -translate-x-1/2 z-30 w-full flex justify-center">
+                    <Navigation />
+                </nav>
 
-               <TypewriterText text="Technical Blog" speed={120} pause={1000} style="text-3xl md:text-4xl font-extrabold text-center mb-8 gradient-text"/>
+                {/* Banner Content */}
+                <div className="relative z-20 text-center px-4">
+                    <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-4">Technical Blog</h1>
+                    <p className="text-gray-200 text-sm sm:text-base md:text-lg max-w-2xl mx-auto">
+                        <i className="fa-solid fa-code text-cyan-400 mr-2"></i>
+                        Explore in-depth articles on web development, programming patterns, and software design principles.
+                    </p>
+                </div>
+
+                {/* Background Overlay */}
+                <div className="absolute inset-0 bg-black/30 z-10"></div>
+            </section>
+
+            <div className="container mx-auto py-10 px-4">
+
+               <TypewriterText text="All Articles" speed={120} pause={1000} style="text-2xl md:text-3xl font-extrabold text-center mb-8 gradient-text"/>
 
 
 
@@ -92,6 +114,7 @@ export const TechnicalBlogList: React.FC = () => {
                     </Card>
                 ))}
             </div>
-        </div>
+            </div>
+        </>
     );
 }

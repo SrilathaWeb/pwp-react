@@ -74,8 +74,8 @@ type ObserverOptions = {
     threshold?: number | number[];
 };
 
-const useOnScreen = (options: ObserverOptions): [React.RefObject<HTMLDivElement>, boolean] => {
-    const ref = useRef<HTMLDivElement>(null);
+const useOnScreen = (options: ObserverOptions): [React.RefObject<HTMLDivElement | null>, boolean] => {
+    const ref = useRef<HTMLDivElement | null>(null);
     const [isIntersecting, setIntersecting] = useState(false);
 
     useEffect(() => {
@@ -126,19 +126,19 @@ const TimelineItem: React.FC<{ entry: TimelineEntry }> = ({ entry }) => {
             // Attach the ref from the hook
             ref={ref}
             // Use isVisible to trigger the transform and opacity changes
-            className={`flex items-start space-x-4 transition-opacity transition-transform duration-700 ease-in-out 
+            className={`flex items-start space-x-3 sm:space-x-4 transition-opacity transition-transform duration-700 ease-in-out
                         ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
         >
             {/* Timeline Line & Dot Container */}
             <div className="flex flex-col items-center">
                 {/* The Dot */}
-                <div className={`flex-shrink-0 relative w-5 h-5 rounded-full ring-4 ring-black mt-1 ${dotColor}`}></div>
+                <div className={`flex-shrink-0 relative w-4 sm:w-5 h-4 sm:h-5 rounded-full ring-4 ring-black mt-1 ${dotColor}`}></div>
             </div>
 
             {/* Content Body */}
-            <div className="flex-1">
-                <h3 className={`text-2xl font-semibold ${titleColor}`}>{entry.title}</h3>
-                <p className="text-gray-400 text-sm mb-2">{entry.company} | {entry.date}</p>
+            <div className="flex-1 min-w-0">
+                <h3 className={`text-lg sm:text-2xl font-semibold ${titleColor}`}>{entry.title}</h3>
+                <p className="text-gray-400 text-xs sm:text-sm mb-2">{entry.company} | {entry.date}</p>
                 {ContentBody}
             </div>
         </div>
@@ -164,18 +164,18 @@ export default function Timeline() {
 
 
     return (
-        <section id="timeline " ref={timelineRef}  className="mx-auto px-6 py-10 bg-gray-800 text-gray-200">
+        <section id="timeline " ref={timelineRef}  className="mx-auto px-4 sm:px-6 py-10 bg-gray-800 text-gray-200">
 
-            <h2 className="text-4xl font-extrabold text-center gradient-text mb-10">
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-center gradient-text mb-10">
                 Professional Experience
             </h2>
 
-            <div className="relative max-w-full mx-auto flex flex-col space-y-10">
+            <div className="relative max-w-full mx-auto flex flex-col space-y-8 sm:space-y-10">
 
                 {/* The continuous line: Positioned absolutely down the left side */}
                 {/* This line provides the backbone for the timeline visualization */}
 
-                <div className="absolute left-2 w-1 bg-gray-600 h-full"></div>
+                <div className="absolute left-2 sm:left-3 w-1 bg-gray-600 h-full"></div>
 
                 {timelineData.map((entry, index) => (
 

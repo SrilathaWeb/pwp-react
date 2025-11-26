@@ -22,7 +22,7 @@ interface RolesDropAnimationProps {
     isActive: boolean;
 }
 
-export default function RolesDropAnimation  ({ isActive }):React.FC<RolesDropAnimationProps>{
+const RolesDropAnimation: React.FC<RolesDropAnimationProps> = ({ isActive }) => {
     // Defines the initial state (hidden/off-screen)
     const initialProps = { y: 300, opacity: 0, x: 0, rotate: 0 };
 
@@ -53,4 +53,6 @@ export default function RolesDropAnimation  ({ isActive }):React.FC<RolesDropAni
             ))}
         </div>
     );
-}
+};
+
+export default RolesDropAnimation;

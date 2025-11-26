@@ -1,5 +1,6 @@
 import {useEffect} from "react";
 import {useLocation} from "react-router";
+import { Navigation } from "../layouts/custom-nav.tsx";
 
 const travelVlogs = [
     {
@@ -139,12 +140,16 @@ export default function VideoBlog() {
 
     return (
         <>
+            {/* Transparent Navigation Bar */}
+            <nav className="absolute top-4 md:top-8 left-1/2 -translate-x-1/2 flex justify-center z-30 w-full">
+                <Navigation />
+            </nav>
 
             <section className="relative">
 
                 <div id="travel-carousel" className="relative w-full" data-carousel="slide">
 
-                    <div className="relative h-[400px] overflow-hidden rounded-lg z-0">
+                    <div className="relative h-48 sm:h-64 md:h-80 lg:h-[400px] overflow-hidden rounded-lg z-0">
 
                             {scrollImages.map((url) => (
                                 <div className="hidden duration-700 ease-in-out" data-carousel-item>
@@ -171,16 +176,16 @@ export default function VideoBlog() {
                         ))}
                     </Carousel>
                 </div>*/}
-                <div className="absolute inset-0 bg-black/50 flex flex-col justify-center items-center text-center px-6">
-                    <h1 className="text-5xl font-bold gradient-text mb-4">Welcome to My Capturing Moments</h1>
-                    <p className="text-gray-300 max-w-2xl">
+                <div className="absolute inset-0 bg-black/50 flex flex-col justify-center items-center text-center px-4 sm:px-6">
+                    <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold gradient-text mb-4">Welcome to My Capturing Moments</h1>
+                    <p className="text-gray-300 text-sm sm:text-base max-w-2xl">
                         <i className="fa-solid fa-video text-cyan-400 mr-2"></i>
                         I capture the beauty of the world through my lens — from serene deserts to soaring peaks.
                         Join me on my adventures and see the world the way I do.
                     </p>
-                    <div className="mt-8">
+                    <div className="mt-6 sm:mt-8">
                         <a href="https://www.youtube.com/@sathvikreddy16" target="_blank"
-                           className="bg-gradient-to-r from-cyan-500 to-purple-600 px-6 py-3 rounded-lg text-white font-semibold hover:opacity-90 transition">
+                           className="inline-block bg-gradient-to-r from-cyan-500 to-purple-600 px-4 sm:px-6 py-2 sm:py-3 rounded-lg text-white text-sm sm:text-base font-semibold hover:opacity-90 transition">
                             <i className="fa-brands fa-youtube mr-2"></i> Visit My YouTube Channel
                         </a>
                     </div>
@@ -188,9 +193,9 @@ export default function VideoBlog() {
             </section>
 
             <div className=" bg-gray-600">
-                <section className="pt-10 text-center">
-                    <h1 className="text-4xl font-extrabold gradient-text mb-4">My Travel Vlogs</h1>
-                    <p className="text-purple-400 max-w-2xl mx-auto">
+                <section className="pt-8 sm:pt-10 px-4 text-center">
+                    <h1 className="text-3xl sm:text-4xl font-extrabold gradient-text mb-4">My Travel Vlogs</h1>
+                    <p className="text-purple-400 text-sm sm:text-base max-w-2xl mx-auto">
                         <i className="fa-solid fa-video text-cyan-400 mr-2"></i>
                         I love exploring new places and capturing those moments through my YouTube channel.
                         Join me on my journeys and experiences through
@@ -201,12 +206,12 @@ export default function VideoBlog() {
                     </p>
 
                 </section>
-                <section className="max-w-7xl mx-auto px-6 pb-20 mt-10">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+                <section className="max-w-7xl mx-auto px-4 sm:px-6 pb-10 sm:pb-20 mt-8 sm:mt-10">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-10">
 
                             {travelVlogs.map((vlog,index) => (
                                 <>
-                                <div  id={index} className="bg-gray-900 rounded-xl shadow-lg hover:shadow-red-500/30 transition p-2">
+                                <div  id={String(index)} className="bg-gray-900 rounded-xl shadow-lg hover:shadow-red-500/30 transition p-2">
                                 <iframe key={vlog.location} width="100%" src={vlog.videoUrl} title={vlog.location}></iframe>
                                 <div className="p-2">
                                     <h3 className="text-sm font-semibold text-red-500"><i className={`fa-solid ${vlog.icon} mr-2`}></i>{vlog.location}</h3>
