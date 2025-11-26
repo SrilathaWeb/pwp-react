@@ -4,8 +4,8 @@ export default function Contact() {
 
             <div className="flex flex-col justify-center items-center space-y-6">
 
-                <h1 className="text-center text-4xl mb-3 bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent font-bold">
-                    Get in Touch
+                <h1 id="contact" className="text-center text-4xl mb-3 bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent font-bold">
+                   Contact Me
                 </h1>
                 <p className="text-center text-cyan-400 mb-6 max-w-md">
                     Have a project in mind or want to collaborate? I’m always excited to connect and collaborate.

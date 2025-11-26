@@ -1,6 +1,5 @@
 import {useEffect} from "react";
 import {useLocation} from "react-router";
-//import {Carousel} from "flowbite-react";
 
 const travelVlogs = [
     {
@@ -127,7 +126,6 @@ export default function VideoBlog() {
         const items = document.querySelectorAll("[data-carousel-item]");
         let index = 0;
 
-        console.log(scrollImages.length);
         if (items.length === 0) return;
         const interval = setInterval(() => {
             items.forEach((item, i) => {
@@ -206,9 +204,9 @@ export default function VideoBlog() {
                 <section className="max-w-7xl mx-auto px-6 pb-20 mt-10">
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
 
-                            {travelVlogs.map((vlog) => (
+                            {travelVlogs.map((vlog,index) => (
                                 <>
-                                <div className="bg-gray-900 rounded-xl shadow-lg hover:shadow-red-500/30 transition p-2">
+                                <div  id={index} className="bg-gray-900 rounded-xl shadow-lg hover:shadow-red-500/30 transition p-2">
                                 <iframe key={vlog.location} width="100%" src={vlog.videoUrl} title={vlog.location}></iframe>
                                 <div className="p-2">
                                     <h3 className="text-sm font-semibold text-red-500"><i className={`fa-solid ${vlog.icon} mr-2`}></i>{vlog.location}</h3>

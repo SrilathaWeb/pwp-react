@@ -15,14 +15,14 @@ export function Navigation() {
 
     const navItems = [
         { name: "HOME", path: "/" },
-        { name: "ABOUT", path: "/about" },
-        { name: "SKILLS", path: "/skills" },
-        { name:"ROLES", path: "/roles" },
+      /*  { name: "ABOUT", path: "#about" },
+        { name: "SKILLS", path: "#skills" },
+        { name:"ROLES", path: "#roles" },
         { name: "PORTFOLIO", path: "/portfolio" },
-        { name: "TIMELINE", path: "/timeline" },
+        { name: "TIMELINE", path: "/timeline" },*/
         { name: "TECHNICAL BLOG", path: "/technicalblog" },
         { name: "VIDEO BLOG", path: "/videoblog" },
-        { name: "CONTACT", path: "/contact" },
+      /*  { name: "CONTACT", path: "/contact" },*/
     ];
 
     return (
