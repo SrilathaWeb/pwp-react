@@ -1,6 +1,20 @@
-import {useEffect} from "react";
+import {useEffect, useState} from "react";
 import {useLocation} from "react-router";
 import { Navigation } from "../layouts/custom-nav.tsx";
+
+// Simple loader component for video blog
+const VideoBlogLoader = () => (
+    <div className="fixed inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 flex items-center justify-center z-[999]">
+        <div className="relative w-20 h-20">
+            <div className="absolute inset-0 rounded-full border-4 border-transparent border-t-red-400 border-r-pink-500 animate-spin"></div>
+            <div className="absolute inset-2 rounded-full border-4 border-transparent border-b-red-300 border-l-pink-400 animate-spin" style={{ animationDirection: 'reverse' }}></div>
+            <div className="absolute inset-6 rounded-full bg-gradient-to-r from-red-400 to-pink-500 animate-pulse"></div>
+        </div>
+        <div className="absolute bottom-20 text-center">
+            <p className="text-red-400 font-semibold text-lg animate-pulse">Loading videos...</p>
+        </div>
+    </div>
+);
 
 const travelVlogs = [
     {
@@ -122,6 +136,7 @@ const scrollImages = [
 export default function VideoBlog() {
 
     const location = useLocation();
+    const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
         const items = document.querySelectorAll("[data-carousel-item]");
@@ -138,18 +153,33 @@ export default function VideoBlog() {
         return () => clearInterval(interval);
     }, [location.pathname]); // rerun on route change
 
+    useEffect(() => {
+        // Scroll to top when page loads
+        window.scrollTo(0, 0);
+
+        // Hide loader after page loads
+        const handleLoad = () => {
+            setTimeout(() => {
+                setIsLoading(false);
+            }, 500);
+        };
+
+        if (document.readyState === 'complete') {
+            handleLoad();
+        } else {
+            window.addEventListener('load', handleLoad);
+            return () => window.removeEventListener('load', handleLoad);
+        }
+    }, []);
+
     return (
         <>
-            {/* Transparent Navigation Bar */}
-            <nav className="absolute top-4 md:top-8 left-1/2 -translate-x-1/2 flex justify-center z-30 w-full">
-                <Navigation />
-            </nav>
-
+            {isLoading && <VideoBlogLoader />}
             <section className="relative">
 
                 <div id="travel-carousel" className="relative w-full" data-carousel="slide">
 
-                    <div className="relative h-48 sm:h-64 md:h-80 lg:h-[400px] overflow-hidden rounded-lg z-0">
+                    <div className="relative h-80 sm:h-96 md:h-122 lg:h-[400px] overflow-hidden rounded-lg z-0">
 
                             {scrollImages.map((url) => (
                                 <div className="hidden duration-700 ease-in-out" data-carousel-item>
@@ -159,14 +189,20 @@ export default function VideoBlog() {
                             ))}
 
                         </div>
-                    <div className="absolute z-30 flex space-x-3 bottom-5 left-1/2 -translate-x-1/2">
+
+                    {/* Navigation Bar on top of image */}
+                    <nav className="absolute top-2 md:top-4 left-1/2 -translate-x-1/2 flex justify-center z-30 w-full">
+                        <Navigation />
+                    </nav>
+
+                   {/* <div className="absolute z-30 flex space-x-3 bottom-5 left-1/2 -translate-x-1/2">
                         { scrollImages.map((_, index) => (
                             <>
                             <button type="button" className="w-3 h-3 rounded-full bg-white/50 hover:bg-white"
                                     aria-current="true" aria-label={`Slide ${index+1}`} data-carousel-slide-to={index}></button>
                             </>
                         )) }
-                        </div>
+                        </div>*/}
                 </div>
                {/* <div className="relative h-56 sm:h-64 xl:h-80 2xl:h-96">
                     <Carousel slideInterval={5000}>
@@ -176,7 +212,7 @@ export default function VideoBlog() {
                         ))}
                     </Carousel>
                 </div>*/}
-                <div className="absolute inset-0 bg-black/50 flex flex-col justify-center items-center text-center px-4 sm:px-6">
+                <div className="absolute inset-0 top-12 sm:top-16 md:top-0 bg-black/50 flex flex-col justify-center items-center text-center px-4 sm:px-6">
                     <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold gradient-text mb-4">Welcome to My Capturing Moments</h1>
                     <p className="text-gray-300 text-sm sm:text-base max-w-2xl">
                         <i className="fa-solid fa-video text-cyan-400 mr-2"></i>

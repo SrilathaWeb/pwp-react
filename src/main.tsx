@@ -15,10 +15,12 @@ import {CustomNav} from "./layouts/custom-nav.tsx";
 import {TechnicalBlogList} from "./routes/technicalblog/technical_blog_list.tsx";
 import TechnicalBlogPost from "./routes/technicalblog/technical_blog_post.tsx";
 import Roles from "./routes/roles.tsx";
+import LoadingSpinner from "./components/loading-spinner.tsx";
 
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
+      <LoadingSpinner />
       <BrowserRouter>
           <CustomNav/>
         <Routes>

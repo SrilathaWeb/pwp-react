@@ -164,7 +164,7 @@ export default function Timeline() {
 
 
     return (
-        <section id="timeline " ref={timelineRef}  className="mx-auto px-4 sm:px-6 py-10 bg-gray-800 text-gray-200">
+        <section id="timeline" ref={timelineRef}  className="mx-auto px-4 sm:px-6 py-10 bg-gray-800 text-gray-200">
 
             <h2 className="text-3xl sm:text-4xl font-extrabold text-center gradient-text mb-10">
                 Professional Experience

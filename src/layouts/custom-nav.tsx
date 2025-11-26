@@ -1,4 +1,4 @@
-import { NavLink, useLocation } from "react-router";
+import { useLocation } from "react-router";
 
 // Navigation Component
 export const Navigation = () => {
@@ -15,6 +15,11 @@ export const Navigation = () => {
         }
     };
 
+    const handleBlogNavigation = (path: string) => {
+        // Navigate to the blog page and scroll to top
+        window.location.href = path;
+    };
+
     return (
         <div className="flex flex-wrap gap-2 md:gap-4 p-2 bg-gray-900/50 backdrop-blur-sm rounded-full shadow-lg justify-center max-w-4xl">
             {['Home','About', 'Skills','Portfolio', 'Timeline', 'Contact'].map(item => (
@@ -26,16 +31,18 @@ export const Navigation = () => {
                     {item}
                 </button>
             ))}
-            <NavLink  className="text-white hover:text-cyan-400 px-2 md:px-3 py-1 text-xs md:text-sm font-medium transition duration-200"
-                key='VIDEO BLOG'
-                to='/videoblog'>
+            <button
+                onClick={() => handleBlogNavigation('/videoblog')}
+                className="text-white hover:text-cyan-400 px-2 md:px-3 py-1 text-xs md:text-sm font-medium transition duration-200 bg-none border-none cursor-pointer"
+            >
                 Video Blog
-            </NavLink>
-            <NavLink className="text-white hover:text-cyan-400 px-2 md:px-3 py-1 text-xs md:text-sm font-medium transition duration-200"
-                key='TECHNICAL BLOG'
-                to='/technicalblog'>
+            </button>
+            <button
+                onClick={() => handleBlogNavigation('/technicalblog')}
+                className="text-white hover:text-cyan-400 px-2 md:px-3 py-1 text-xs md:text-sm font-medium transition duration-200 bg-none border-none cursor-pointer"
+            >
                 Technical Blog
-            </NavLink>
+            </button>
         </div>
     );
 };

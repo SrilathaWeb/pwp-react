@@ -1,6 +1,6 @@
 export default function Contact() {
     return (
-        <div className="grid md:grid-cols-2 grid-cols-1 p-8 bg-gray-900 text-white gap-8">
+        <div id="contact" className="grid md:grid-cols-2 grid-cols-1 p-8 bg-gray-900 text-white gap-8">
 
             <div className="flex flex-col justify-center items-center space-y-6">
 

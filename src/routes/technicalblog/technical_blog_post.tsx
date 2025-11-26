@@ -40,13 +40,13 @@ export default function TechnicalBlogPost() {
                 <ArrowLeftIcon className="mr-5" />
                 Back to Blog
             </Link>
-            <Link
+          {/*  <Link
                 to="/skills"
                 className="text-purple-600 hover:underline flex mt-5"
             >
                 <ArrowLeftIcon className="mr-5" />
                 Back to Skill
-            </Link>
+            </Link>*/}
 
             <div className="prose prose-invert max-w-none">
                 <ReactMarkdown

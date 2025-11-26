@@ -201,6 +201,15 @@ export default function HeroSection({ professionalRoles }: HeroSectionProps) {
                             <i className="fa-brands fa-linkedin"></i>
                         </motion.a>
                         <motion.a
+                            href="https://instagram.com/srilathait.a"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            whileHover={{ scale: 1.2, rotate: 10 }}
+                            className="text-2xl text-gray-400 hover:text-cyan-400 transition"
+                        >
+                            <i className="fa-brands fa-instagram"></i>
+                        </motion.a>
+                        <motion.a
                             href="https://www.youtube.com/@sathvikreddy16"
                             target="_blank"
                             rel="noopener noreferrer"
