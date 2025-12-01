@@ -1,75 +1,100 @@
-# This is the website to showcase my skills, portfolio, roles and my blogs.
+# CLAUDE.md
 
-# React + TypeScript + Vite
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Project Overview
 
-Currently, two official plugins are available:
+**pwp-react** is a personal portfolio website showcasing skills, portfolio projects, blogs, and roles. It's built with React 19, TypeScript, Vite, and styled with Tailwind CSS and Flowbite React components.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Project Structure
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```
+src/
+├── assets/           # Static assets (images, etc.)
+├── components/       # Reusable React components
+│   └── drop-animation.tsx
+├── layouts/          # Layout wrapper components
+│   ├── custom-nav.tsx         # Navigation bar
+│   ├── custom-footer.tsx       # Footer
+│   ├── navigation.tsx          # (Navigation-related)
+│   └── root-layout.tsx         # Root outlet for routes
+├── routes/           # Page/route components
+│   ├── home.tsx
+│   ├── about.tsx
+│   ├── contact.tsx
+│   ├── skills.tsx
+│   ├── roles.tsx
+│   ├── portfolio.tsx
+│   ├── timeline.tsx
+│   ├── video-blog.tsx
+│   ├── typewriter.tsx          # Typewriter effect component
+│   └── technicalblog/          # Technical blog pages
+│       ├── technical_blog_list.tsx
+│       ├── technical_blog_post.tsx
+│       └── technical_blog_data.tsx
+└── main.tsx          # Router setup and app entry point
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Core Architecture
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Routing
+- **Framework**: React Router v7
+- **Setup**: Configured in `src/main.tsx` with `BrowserRouter`
+- **Root Layout Pattern**: All routes render through `RootLayout` which uses `<Outlet />` for nested route rendering
+- **Navigation**: `CustomNav` component wraps routes (not inside Routes), `CustomFooter` below
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### Styling
+- **CSS Framework**: Tailwind CSS v4 (via `@tailwindcss/vite` plugin)
+- **UI Components**: Flowbite React v0.12.9
+- **Global Styles**: `src/index.css` imports Tailwind and includes custom animations and utility classes
+- **Key Custom Classes**:
+    - `.gradient-text` - Cyan to purple gradient text effect
+    - `.code-banner` - Background image banner (height: 140px)
+    - `.animate-fadeIn` - Fade in animation
+    - `.animate-auto-scroll` - Auto-scrolling animation for horizontal content
+
+### Component Dependencies
+- **Animations**: Framer Motion v12
+- **Icons**: Font Awesome 7 (solid icons via `react-fontawesome`)
+- **Markdown**: `react-markdown` with `remark-gfm` plugin for GitHub-flavored markdown support
+- **Fonts**: Uses 'Poppins' font family (set in `index.css`)
+
+## Development Commands
+
+| Command | Purpose |
+|---------|---------|
+| `npm run dev` | Start Vite dev server with HMR |
+| `npm run build` | Run TypeScript build check (`tsc -b`) then Vite build |
+| `npm run lint` | Run ESLint on all TypeScript/JavaScript files |
+| `npm run preview` | Preview production build locally |
+
+## TypeScript Configuration
+
+### Compiler Settings
+- **Target**: ES2022 (app), ES2023 (build tools)
+- **Strict Mode**: Enabled
+- **JSX**: `react-jsx` (no need to import React in components)
+- **Module Resolution**: Bundler
+- **Import Extensions**: Allowed for TypeScript files
+
+### Linting Rules
+- `noUnusedLocals: true` - Unused variables are errors
+- `noUnusedParameters: true` - Unused parameters are errors
+- `noFallthroughCasesInSwitch: true` - Switch statements must have explicit breaks
+- `noUncheckedSideEffectImports: true` - Be explicit about side-effect imports
+
+## ESLint Configuration
+
+Uses `eslint.config.js` (flat config) with:
+- `@eslint/js` base config
+- `typescript-eslint` recommended rules
+- `eslint-plugin-react-hooks` for hook usage validation
+- `eslint-plugin-react-refresh` for Vite Fast Refresh
+
+## Key Development Notes
+
+1. **No TypeScript Errors on Build**: The build runs `tsc -b` first; fix all TypeScript errors before building
+2. **Component Files**: New components should typically go in `src/components/` unless they're page-level routes (then `src/routes/`)
+3. **Markdown Support**: Technical blog posts use `react-markdown` with GitHub-flavored markdown, supporting code blocks and tables
+4. **Fast Refresh**: Changes to React components are reflected instantly in development without full page reloads
+5. **Tailwind/Flowbite**: Tailwind is used for styling with Flowbite React for pre-built components
